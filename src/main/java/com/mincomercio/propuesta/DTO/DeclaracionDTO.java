@@ -10,6 +10,7 @@ import java.util.List;
 @Builder
 @Data
 public class DeclaracionDTO {
+    private long id;
     private String NIT;
     private String nombreEmpresa;
     private LocalDateTime fechaDeclaracion;

@@ -32,7 +32,7 @@
    http://localhost:8081/vistaDeclaraciones?id=200
    ```       
 
- * Tecnologias:
+ * Tecnologías:
     - 
   ![Principal Screen](Assets/DDD_model.jpg)   
     
@@ -42,6 +42,26 @@
   Son varias API desarrolladas con Java 8, usando el framework SpringBoot, JPA-hibernate hacia una base de datos en memoria H2,
   además se utilizó swagger 2 para la documentacion de las API.
   
-    
-             
+ * Flujo Funcionalidad Básica:
+    - 
+    Existe data precargada para la declaracion con consecutivo 200, para agregar una nueva declaracion
+    debemos utilizar el API de declaraciones y el API para Importadores
+   ```
+   http://localhost:8081/swagger-ui.html
+   ``` 
+    Primero creamos la empresa de importacion con un nit y un nombre:
+ 
+ ![Principal Screen](Assets/CrearImportador.jpg)    
+    Con el nit creado podremos crear la plantilla para la declaracion de importacion con los productos vacios
+ 
+ ![Principal Screen](Assets/PlantillaImportacion.jpg)     
+    Con el consecutivo de declaracion creado podremos adicionar productos usando la direccion:
+   ```
+   http://localhost:8081/vistaDeclaraciones?id=***
+   ``` 
+donde *** es el ID de la declaracion anteriormente creada.     
 
+ * Otras API:
+    - 
+    La aplicacion cuenta con otras API para la generacion de Paises, Categorias de arancel, sobre las cuales
+    se realizan calculos en la declaracion asi como tambien validaciones en el caso de paises vetados.   

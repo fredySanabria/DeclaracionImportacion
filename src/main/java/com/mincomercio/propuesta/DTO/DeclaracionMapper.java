@@ -19,6 +19,7 @@ public class DeclaracionMapper {
     public DeclaracionDTO mapToDTO(Declaracion declaracion){
         double totalArancel = Declaracion.obtenerTotalArancel(declaracion.getProductos());
         return DeclaracionDTO.builder()
+                .id(declaracion.getId())
                 .productos(declaracion.getProductos())
                 .totalArancel(totalArancel)
                 .totalDeclaracion(Declaracion.obtenerTotalDeclaracion(declaracion.getProductos()) + totalArancel)
