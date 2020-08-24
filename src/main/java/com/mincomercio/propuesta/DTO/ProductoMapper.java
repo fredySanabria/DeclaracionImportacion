@@ -18,9 +18,6 @@ import org.springframework.stereotype.Service;
 public class ProductoMapper {
 
     @Autowired
-    private ProductoRepositorio repositorio;
-
-    @Autowired
     private DeclaracionRepositorio declaracionRepositorio;
 
     @Autowired

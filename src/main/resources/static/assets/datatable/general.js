@@ -40,6 +40,8 @@
         })
 	}
     function llenarEncabezadoEmpresa(){
+        $('#encabezado').empty();
+        $('#valorTotal').empty();
         $.ajax({
             url: "http://localhost:8081/declaraciones/"+getId(),
             success: function (data) {
@@ -103,6 +105,7 @@
                           }),
             success: function (result) {
                     alert('Se ha creado el producto ' + result.id);
+                    llenarEncabezadoEmpresa();
                     llenarDataTable();
                 }
         });
